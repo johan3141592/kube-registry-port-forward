@@ -30,5 +30,5 @@ docker logs kube-registry
 ## Build the Image
 Prebuilt Docker images are available from [ghcr.io](https://github.com/johan3141592/kube-registry-port-forward/pkgs/container/kube-registry-port-forward). To build a `kube-registry-port-forward` image, use the following command:
 ```
-docker build -f Dockerfile.amd64 -t kube-registry-port-forward .
+docker build -t kube-registry-port-forward .
 ```
