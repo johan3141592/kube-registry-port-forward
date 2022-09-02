@@ -3,14 +3,16 @@ kube-registry-port-forward helps with running `kubectl port-forward services/kub
 ## Run the Image
 To directly run the image, use the following Docker command:
 ```
-docker run --rm -v ~/.kube:/root/.kube -p 32000:5000 ghcr.io/johan3141592/kube-registry-port-forward
+docker run --rm -v ~/.kube:/root/.kube -p 32000:5000 \
+    ghcr.io/johan3141592/kube-registry-port-forward
 ```
 Note that `-v ~/.kube:/root/.kube` bind-mounts your Kubernetes configuration.
 
 ## Create a Container From the Image
 To create a Docker container from the image, use the following Docker command:
 ```
-docker create --name kube-registry -v ~/.kube:/root/.kube -p 32000:5000 ghcr.io/johan3141592/kube-registry-port-forward
+docker create --name kube-registry -v ~/.kube:/root/.kube -p 32000:5000 \
+    ghcr.io/johan3141592/kube-registry-port-forward
 ```
 A Docker container can run in the background and be started and stopped using Docker commands. To start the Docker container, use the following Docker command:
 ```
